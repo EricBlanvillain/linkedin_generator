@@ -1,0 +1,38 @@
+.app-nav-header {
+    background-color: var(--linkedin-card-bg);
+    border-bottom: 1px solid var(--linkedin-border-color);
+    margin-bottom: 2rem; /* Space below header */
+    padding: 0 1rem; /* Padding inside header */
+}
+
+.app-nav-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem; /* Space between tabs */
+}
+
+.app-nav-header nav ul li {
+    margin: 0;
+}
+
+.app-nav-header nav ul li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--linkedin-text-secondary);
+    font-weight: 600;
+    border-bottom: 3px solid transparent; /* Placeholder for active indicator */
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.app-nav-header nav ul li a:hover {
+    color: #191919;
+    background-color: #f0f0f0; /* Slight hover background */
+}
+
+.app-nav-header nav ul li a.active {
+    color: var(--linkedin-blue);
+    border-bottom-color: var(--linkedin-blue);
+}

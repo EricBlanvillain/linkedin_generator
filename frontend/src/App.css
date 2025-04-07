@@ -1,0 +1,472 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Light Theme - LinkedIn Inspired */
+  color-scheme: light;
+  color: #191919; /* Dark text color */
+  background-color: #f3f2ef; /* LinkedIn-like background */
+
+  --linkedin-blue: #0A66C2;
+  --linkedin-blue-darker: #004182;
+  --linkedin-grey-bg: #f3f2ef;
+  --linkedin-card-bg: #ffffff;
+  --linkedin-border-color: #e0e0e0;
+  --linkedin-text-secondary: #5e5e5e;
+  --linkedin-button-secondary-bg: #eef3f8;
+  --linkedin-button-secondary-text: var(--linkedin-blue);
+  --linkedin-button-secondary-border: var(--linkedin-blue);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start; /* Align to top */
+  justify-content: center; /* Center horizontally */
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 2rem 1rem; /* Add padding top/bottom */
+  background-color: var(--linkedin-grey-bg);
+}
+
+.App {
+  max-width: 750px; /* Slightly narrower */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.App-header {
+  margin-bottom: 1rem; /* Reduce space between title header and nav header */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--linkedin-border-color);
+}
+
+main {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Keep gap */
+  /* Remove padding/background from main, apply to cards */
+}
+
+/* Ensure cards take full width within main */
+main > .card {
+    /* Styles already defined in .card */
+}
+
+h1 {
+  font-size: 2.0em; /* Adjusted */
+  line-height: 1.2;
+  color: #191919;
+}
+
+textarea,
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border-radius: 4px; /* Less rounded */
+  border: 1px solid #ccc; /* Standard border */
+  background-color: #fff; /* White background */
+  color: #191919;
+  font-size: 1em;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+textarea:focus,
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--linkedin-blue);
+    box-shadow: 0 0 0 1px var(--linkedin-blue);
+}
+textarea {
+  min-height: 120px; /* Adjusted height */
+  resize: vertical;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px; /* Pill shape */
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 0.95em;
+  font-weight: 600; /* Bolder text */
+  font-family: inherit;
+  background-color: var(--linkedin-button-secondary-bg);
+  color: var(--linkedin-text-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.1s ease;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+button:hover {
+  background-color: #dde7f1; /* Slightly darker secondary hover */
+  color: #202124;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 -1.5px 0 rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.05);
+}
+button:active {
+    /* transform: scale(0.98); */ /* Remove scale */
+    background-color: #d0dce8;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--linkedin-blue);
+  outline-offset: 2px;
+}
+button:disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+/* Primary action button style */
+.button-primary {
+    background-color: var(--linkedin-blue);
+    color: white;
+    box-shadow: none;
+}
+.button-primary:hover {
+    background-color: var(--linkedin-blue-darker);
+    box-shadow: none;
+}
+.button-primary:disabled {
+    background-color: var(--linkedin-blue);
+    color: white;
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+/* Secondary/utility button style */
+.button-secondary {
+    /* Default button style acts as secondary */
+     background-color: var(--linkedin-button-secondary-bg);
+    color: var(--linkedin-button-secondary-text);
+    border: 1px solid var(--linkedin-button-secondary-border);
+    box-shadow: none;
+}
+.button-secondary:hover {
+    background-color: rgba(10, 102, 194, 0.1);
+    border: 1px solid var(--linkedin-blue);
+    box-shadow: inset 0 0 0 1px var(--linkedin-blue);
+}
+.button-secondary:disabled {
+     background-color: var(--linkedin-button-secondary-bg);
+     color: var(--linkedin-button-secondary-text);
+     border-color: var(--linkedin-button-secondary-border);
+     opacity: 0.5;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600; /* Bolder labels */
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.9em;
+}
+
+/* Analysis Results Formatting */
+.analysis-results {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9; /* Very light grey */
+  border: 1px solid var(--linkedin-border-color);
+  border-radius: 8px;
+}
+.analysis-results h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.analysis-item {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: baseline;
+    font-size: 0.9em;
+}
+.analysis-item strong {
+    display: inline-block;
+    min-width: 140px; /* Adjusted */
+    color: var(--linkedin-text-secondary);
+    font-weight: 400; /* Regular weight */
+    margin-right: 10px;
+}
+.analysis-item span {
+    color: #191919;
+}
+.analysis-item ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* Status/Error Messages */
+.error {
+    color: #c00; /* Standard error red */
+    margin-top: 1rem;
+    font-weight: 500;
+    background-color: #fdecea;
+    border: 1px solid #f1b0a8;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+.success {
+    color: #0f5132; /* Dark green */
+    margin-top: 1rem;
+    font-weight: 500;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+/* Post Generator Specifics */
+.post-generator {
+    /* Inherits card styles */
+}
+.generated-posts {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--linkedin-border-color);
+}
+.generated-posts h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #191919;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.post-draft {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid var(--linkedin-border-color);
+    border-radius: 8px;
+    position: relative;
+}
+.post-draft pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    color: #191919;
+    font-family: inherit;
+    line-height: 1.6;
+}
+.copy-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.2em 0.6em;
+    font-size: 0.8em;
+    font-weight: 600;
+    background-color: var(--linkedin-button-secondary-bg);
+    color: var(--linkedin-button-secondary-text);
+    border: 1px solid var(--linkedin-button-secondary-border);
+    border-radius: 12px; /* Pill */
+    cursor: pointer;
+    box-shadow: none;
+}
+.copy-button:hover {
+    background-color: rgba(10, 102, 194, 0.1);
+    box-shadow: inset 0 0 0 1px var(--linkedin-blue);
+}
+
+.refresh-styles-button {
+    margin-left: 0.75rem;
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+    min-width: 40px; /* Ensure button has width */
+    border-radius: 50%; /* Make it round */
+    border-width: 1px;
+}
+
+/* Saved Styles List */
+.styles-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.styles-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--linkedin-border-color);
+}
+
+.styles-list li:last-child {
+    border-bottom: none;
+}
+
+.styles-list span {
+    color: #191919;
+    font-weight: 500;
+}
+
+.delete-button {
+    margin-left: 1rem;
+    padding: 0.2em 0.7em !important; /* Override general button padding */
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    line-height: 1.4;
+    /* Colors/borders inherit from .button-secondary */
+}
+
+/* Saved Drafts (Placeholder styles if needed) */
+.saved-drafts {
+    /* Inherits card styles */
+}
+
+/* Saved Drafts List */
+.drafts-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.drafts-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to top for multi-line content */
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--linkedin-border-color);
+    gap: 1rem;
+}
+
+.drafts-list li:last-child {
+    border-bottom: none;
+}
+
+.draft-content {
+    flex-grow: 1;
+}
+
+.draft-topic {
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95em;
+}
+
+.draft-text-preview {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--linkedin-text-secondary);
+    max-height: 6em; /* Limit preview height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Consider adding a fade-out effect for overflow */
+}
+
+.draft-date {
+    font-size: 0.8em;
+    color: #888;
+    margin: 0;
+}
+
+.draft-actions-list {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically if needed */
+    gap: 0.5rem;
+    flex-shrink: 0; /* Prevent actions column from shrinking */
+}
+
+/* Use existing .delete-button style */
+.draft-actions-list .delete-button {
+    margin-left: 0; /* Remove margin if stacked */
+}
+
+/* Styles for save draft button area in PostGenerator */
+.draft-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    min-height: 2em; /* Ensure space for error message */
+}
+
+.save-draft-button {
+     padding: 0.2em 0.6em !important; /* Make smaller like copy */
+    font-size: 0.8em !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important; /* Pill */
+}
+
+.draft-save-error {
+    font-size: 0.8em;
+    color: #c00;
+    margin-right: auto; /* Push error message to the left */
+}

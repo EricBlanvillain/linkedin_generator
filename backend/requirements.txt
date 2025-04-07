@@ -1,0 +1,11 @@
+Flask
+Flask-PyMongo
+python-dotenv
+anthropic
+Flask-Cors
+requests
+
+# Testing
+pytest
+pytest-flask
+pytest-mock

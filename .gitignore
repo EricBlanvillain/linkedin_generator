@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+*.so
+*.coverage
+.hypothesis/
+*.log
+local_settings.py
+db.sqlite3
+*.orig
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+.output
+.nitro
+.vercel
+.netlify
+
+# Frontend Build output
+/frontend/dist/
+
+# IDE / Editor specific
+.vscode/
+.cursor
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*.local
+.env.local
+secrets/
+*.pem
+*.key
