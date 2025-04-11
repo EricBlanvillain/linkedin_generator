@@ -33,8 +33,8 @@ fi
 
 echo "Starting backend server (Flask on port 5001)..."
 cd backend
-# Explicitly point to the 'app' module (app.py)
-flask --app app run --port 5001 &
+# Explicitly use the Python interpreter from the virtual environment (relative to current dir)
+./venv/bin/python -m flask --app app run --port 5001 &
 BACKEND_PID=$!
 cd ..
 
